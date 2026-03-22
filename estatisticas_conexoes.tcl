@@ -13,11 +13,11 @@ while {[gets $fp data] >= 0} {
 			set nome [lindex $data 1] 
 			lappend nome_in $nome
 		}		
-		"output *" {
+		"output *"{
 			set nome [lindex $data 2]
 			lappend nome_out $nome
 		}
-		"wire *" {
+		"wire *"{
 			set nome [lindex $data 1]
 			lappend nome_wire $nome
 		}
