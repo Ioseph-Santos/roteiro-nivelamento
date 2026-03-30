@@ -5,6 +5,7 @@ vtest=0
 tbvtest=0
 vhtest=0
 script_test=0
+mdtxt_test=0
 
 
 for arquivo in *tb.v; do
@@ -70,5 +71,25 @@ if [ "$script_test" -eq 1 ]; then
         fi
     done
 fi
+
+#Fim das extensões tcl, do e sh
+
+for arquivo in *.md *.txt; do
+    if [  "$arquivo" ]; then
+        mkdir docs
+        mdtxt_test=1
+        break
+    fi
+done
+
+if [ "$mdtxt_test" -eq 1 ]; then
+    for arquivo in *.md *.txt; do
+        if [ "$arquivo" ]; then
+            mv "$arquivo" docs/
+        fi
+    done
+fi
+
+#Fim das extensões md e txt
 
 
