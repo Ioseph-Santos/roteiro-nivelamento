@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#MODIFICADO:
+shopt -s nullglob
+
 cd projeto
 vtest=0
 tbvtest=0
