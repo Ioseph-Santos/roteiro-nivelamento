@@ -23,6 +23,7 @@ done
 
 if [ "$tbvtest" -eq 1 ]; then
         for arquivo in *tb.v; do
+				echo "Movendo $arquivo para tb/"
                 mv "$arquivo"  tb/
         done
 fi
@@ -38,6 +39,7 @@ for arquivo in *.v; do
 done
 if [ "$vtest" -eq 1 ]; then
 	for arquivo in *.v; do
+			echo "Movendo $arquivo para src/"
         	mv "$arquivo"  src/   
 	done      
 fi
@@ -53,6 +55,7 @@ for arquivo in *.vh; do
 done
 if [ "$vhtest" -eq 1 ]; then
 	for arquivo in *.vh; do
+			echo "Movendo $arquivo para include/"
         	mv "$arquivo"  include/
 	done
 fi
@@ -70,6 +73,7 @@ done
 if [ "$script_test" -eq 1 ]; then
     for arquivo in *.tcl *.do *.sh; do
         if [ "$arquivo" ]; then
+			echo "Movendo $arquivo para script/"
             mv "$arquivo" script/
         fi
     done
@@ -88,6 +92,7 @@ done
 if [ "$mdtxt_test" -eq 1 ]; then
     for arquivo in *.md *.txt; do
         if [ "$arquivo" ]; then
+			echo "Movendo $arquivo para docs/"
             mv "$arquivo" docs/
         fi
     done
